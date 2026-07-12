@@ -1,6 +1,6 @@
 # SEC API
 
-SEC API gives software, researchers, and AI agents source-linked SEC filings, normalized company facts, ownership data, and search and market-data workflows.
+SEC API gives software, researchers, and AI agents source-linked SEC filings, normalized company facts, ownership data, and search workflows. Market-data capabilities depend on the applicable plan and provider entitlements.
 
 ## Start Here
 
