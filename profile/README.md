@@ -1,36 +1,37 @@
 # SEC API
 
-SEC API gives developers, researchers, and investment teams programmatic access to SEC filings, normalized company facts, ownership data, and filing search with source links.
+SEC API is a developer platform for building research and automation on SEC filings. Resolve an issuer, retrieve a filing or section, query filed financial data, and keep the source identifiers with the result.
 
-## Choose An Interface
+## What You Can Build
 
-- [REST API](https://docs.secapi.ai/api-reference) for direct HTTP integrations and control over requests and responses.
-- [SDKs](https://docs.secapi.ai/libraries-and-sdks) for JavaScript/TypeScript, Python, Go, and Rust applications.
-- [CLI](https://docs.secapi.ai/cli) for terminal exploration, scripts, and JSON pipelines.
-- [Hosted MCP](https://docs.secapi.ai/mcp-workflows) for an MCP-aware client or agent.
-- [Agent skills](https://github.com/secapi-ai/secapi-skills) for repeatable, evidence-aware research workflows.
+- Filing research tools that search SEC filings by issuer, form, date, or text query.
+- Financial-data workflows using normalized annual and quarterly statements and company facts.
+- Disclosure analysis that retrieves filing sections, including 10-K risk factors.
+- Ownership research for institutional holdings and insider transactions.
+- Filing monitors and delivery workflows for new SEC filing events.
+- Source-backed agent workflows through hosted MCP, CLI commands, SDKs, or REST.
 
-## First Successful Request
+## Start With a Filing
 
-[Create an API key](https://secapi.ai/signup), set it in your environment, then use the [CLI](https://docs.secapi.ai/cli) to retrieve the latest annual filing for Apple:
+1. [Create an API key](https://secapi.ai/signup).
+2. Follow the [first request flows](https://docs.secapi.ai/first-request-flows) to resolve a ticker and retrieve a filing.
+3. Retain the returned accession number, filing date, filing URL, and request ID alongside any analysis. They identify the filing and request behind a result.
 
-```bash
-export SECAPI_API_KEY="secapi_live_..."
-secapi filings latest --ticker AAPL --form 10-K
-```
+## Choose an Interface
 
-The response identifies the filing for a workflow you can extend to a section, statement, or search query. The [first request guide](https://docs.secapi.ai/first-request-flows) covers the same path in more detail.
+- [REST API](https://docs.secapi.ai/api-reference) for direct HTTP integrations.
+- [JavaScript, Python, Go, and Rust SDKs](https://docs.secapi.ai/libraries-and-sdks) for application code.
+- [CLI](https://docs.secapi.ai/cli) for terminal research, scripts, and automation.
+- [Hosted MCP](https://docs.secapi.ai/mcp-workflows) for MCP-aware research and coding clients.
+- [Agent skills](https://github.com/secapi-ai/secapi-skills) for installable SEC research workflows.
 
-## Representative Workflows
+## Explore by Workflow
 
-- [Resolve an issuer and retrieve its latest filing](https://docs.secapi.ai/first-request-flows), then retain the returned filing metadata when you cite or analyze it.
-- [Extract a filing section](https://docs.secapi.ai/tutorials/semantic-search-risk-factors), such as Item 1A risk factors, or search filing text for a disclosure topic.
-- [Read normalized statements and company facts](https://docs.secapi.ai/api-reference/statements/get-v1-statements-all) alongside their filing provenance.
-- [Track institutional ownership changes](https://docs.secapi.ai/tutorials/monitor-13f-holdings) and [insider activity](https://docs.secapi.ai/api-reference/insiders/get-v1-insiders).
-- [Build a filing monitor](https://docs.secapi.ai/tutorials/build-filing-monitor) for a company, form, or disclosure workflow.
-
-## Compatibility And Support
-
-SDKs are available for JavaScript/TypeScript, Python, Go, and Rust. Use `secapi` in new CLI scripts; `omni-sec` remains a compatibility alias. Market-data capabilities depend on the applicable plan and provider entitlements.
+- [Search filings and extract sections](https://docs.secapi.ai/first-request-flows)
+- [Retrieve normalized financial statements](https://docs.secapi.ai/api-reference/statements/get-v1-statements-all)
+- [Monitor 13F holdings changes](https://docs.secapi.ai/tutorials/monitor-13f-holdings)
+- [Analyze insider transactions](https://docs.secapi.ai/api-reference/insiders/get-v1-insiders)
+- [Find disclosures with semantic search](https://docs.secapi.ai/tutorials/semantic-search-risk-factors)
+- [Build a filing monitor](https://docs.secapi.ai/tutorials/build-filing-monitor)
 
 [Documentation](https://docs.secapi.ai) · [API reference](https://docs.secapi.ai/api-reference) · [Pricing](https://secapi.ai/pricing) · [Status](https://status.secapi.ai) · [Support](https://secapi.ai/support)
