@@ -27,7 +27,7 @@ SEC API is a developer platform for building research and automation on SEC fili
 
 ## Explore by Workflow
 
-- [Search filings and extract sections](https://docs.secapi.ai/first-request-flows)
+- [Resolve an issuer, retrieve a recent filing, and extract a section](https://docs.secapi.ai/first-request-flows)
 - [Retrieve normalized financial statements](https://docs.secapi.ai/api-reference/statements/get-v1-statements-all)
 - [Monitor 13F holdings changes](https://docs.secapi.ai/tutorials/monitor-13f-holdings)
 - [Analyze insider transactions](https://docs.secapi.ai/api-reference/insiders/get-v1-insiders)
