@@ -1,37 +1,34 @@
 # SEC API
 
-SEC API is a developer platform for building research and automation on SEC filings. Resolve an issuer, retrieve a filing or section, query filed financial data, and keep the source identifiers with the result.
+SEC API gives developers, investors, and agent builders a source-backed interface to SEC filings, filing data, and ownership records.
 
-## What You Can Build
+## Retrieve a filing
 
-- Filing research tools that search SEC filings by issuer, form, date, or text query.
-- Financial-data workflows using normalized annual and quarterly statements and company facts.
-- Disclosure analysis that retrieves filing sections, including 10-K risk factors.
-- Ownership research for institutional holdings and insider transactions.
-- Filing monitors and delivery workflows for new SEC filing events.
-- Source-backed agent workflows through hosted MCP, CLI commands, SDKs, or REST.
+Create an API key in the [SEC API dashboard](https://secapi.ai/app), then make a server-side request:
 
-## Start With a Filing
+```bash
+export SECAPI_API_KEY="secapi_..."
+curl --fail-with-body -sS \
+  -H "x-api-key: $SECAPI_API_KEY" \
+  "https://api.secapi.ai/v1/filings/latest?ticker=AAPL&form=10-K&view=agent"
+```
 
-1. [Create an API key](https://secapi.ai/signup).
-2. Follow the [first request flows](https://docs.secapi.ai/first-request-flows) to resolve a ticker and retrieve a filing.
-3. Retain the returned accession number, filing date, filing URL, and request ID alongside any analysis. They identify the filing and request behind a result.
+The response identifies the latest matching Apple 10-K. Retain its accession number, filing date, filing URL, and request ID with any analysis; the latest filing can change as new filings arrive.
 
-## Choose an Interface
+## Choose an interface
 
 - [REST API](https://docs.secapi.ai/api-reference) for direct HTTP integrations.
-- [JavaScript, Python, Go, and Rust SDKs](https://docs.secapi.ai/libraries-and-sdks) for application code.
+- [JavaScript, Python, Go, and Rust SDKs](https://docs.secapi.ai/libraries-and-sdks) for application code using the public REST contract.
 - [CLI](https://docs.secapi.ai/cli) for terminal research, scripts, and automation.
-- [Hosted MCP](https://docs.secapi.ai/mcp-workflows) for MCP-aware research and coding clients.
-- [Agent skills](https://github.com/secapi-ai/secapi-skills) for installable SEC research workflows.
+- [Hosted MCP](https://docs.secapi.ai/mcp-install) for MCP-compatible clients. Authenticated tool calls use the same `x-api-key` header.
 
-## Explore by Workflow
+## Build with SEC API
 
-- [Resolve an issuer, retrieve a recent filing, and extract a section](https://docs.secapi.ai/first-request-flows)
+- [Resolve an issuer, retrieve a filing, and extract a section](https://docs.secapi.ai/first-request-flows)
 - [Retrieve normalized financial statements](https://docs.secapi.ai/api-reference/statements/get-v1-statements-all)
 - [Monitor 13F holdings changes](https://docs.secapi.ai/tutorials/monitor-13f-holdings)
 - [Analyze insider transactions](https://docs.secapi.ai/api-reference/insiders/get-v1-insiders)
 - [Find disclosures with semantic search](https://docs.secapi.ai/tutorials/semantic-search-risk-factors)
 - [Build a filing monitor](https://docs.secapi.ai/tutorials/build-filing-monitor)
 
-[Documentation](https://docs.secapi.ai) · [API reference](https://docs.secapi.ai/api-reference) · [Pricing](https://secapi.ai/pricing) · [Status](https://status.secapi.ai) · [Support](https://secapi.ai/support)
+Machine data requests use `x-api-key`; do not send a machine key as `Authorization: Bearer` or expose it in browser code. Start with the [documentation](https://docs.secapi.ai), check [status](https://status.secapi.ai), or get [support](https://secapi.ai/support).
