@@ -1,6 +1,6 @@
 # SEC API
 
-SEC API gives developers, investors, and agent builders a source-backed interface to SEC filings, filing data, and ownership records.
+SEC API gives developers, investors, and agent builders programmatic access to SEC filings, filing data, and ownership records.
 
 ## Retrieve a filing
 
@@ -31,4 +31,4 @@ The response identifies the latest matching Apple 10-K. Retain its accession num
 - [Find disclosures with semantic search](https://docs.secapi.ai/tutorials/semantic-search-risk-factors)
 - [Build a filing monitor](https://docs.secapi.ai/tutorials/build-filing-monitor)
 
-Machine data requests use `x-api-key`; do not send a machine key as `Authorization: Bearer` or expose it in browser code. Start with the [documentation](https://docs.secapi.ai), check [status](https://status.secapi.ai), or get [support](https://secapi.ai/support).
+Machine data requests use `x-api-key`; do not send a machine key as `Authorization: Bearer` or expose it in browser code. Start with the [documentation](https://docs.secapi.ai), review [pricing](https://secapi.ai/pricing), check [status](https://status.secapi.ai), or get [support](https://secapi.ai/support).
