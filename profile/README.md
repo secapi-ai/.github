@@ -1,6 +1,6 @@
 # SEC API
 
-SEC API gives developers, investors, and agent builders programmatic access to SEC filings, filing data, and ownership records.
+SEC API gives developers, investors, and agent builders programmatic access to SEC filings, issuer records, financial statements, and ownership data.
 
 ## Retrieve a filing
 
