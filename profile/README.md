@@ -1,6 +1,6 @@
 # SEC API
 
-SEC API gives developers, investors, and agent builders programmatic access to SEC filings, issuer records, financial statements, and ownership data.
+SEC API is the data interface for teams that need to turn SEC disclosures into inspectable research and production workflows. Retrieve filings, issuer records, financial statements, and ownership data through REST, SDKs, the CLI, or MCP.
 
 ## Retrieve a filing
 
@@ -13,7 +13,7 @@ curl --fail-with-body -sS \
   "https://api.secapi.ai/v1/filings/latest?ticker=AAPL&form=10-K&view=agent"
 ```
 
-The response identifies the latest matching Apple 10-K. Retain its accession number, filing date, filing URL, and request ID with any analysis; the latest filing can change as new filings arrive.
+The response identifies the latest matching Apple 10-K. Treat it as a dated source, not a permanent answer: retain the accession number, filing date, filing URL, and request ID with any analysis because a newer filing can change the result.
 
 ## Choose an interface
 
